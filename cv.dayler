@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Dayler Giraldo Urrea</title>
+    <!-- ============================================
+         CSS BÁSICO: Solo lo necesario para layout
+         Todo el significado viene de HTML semántico
+         ============================================ -->
+    <style>
+        /* Reset mínimo */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        /* ============================================
+           LAYOUT DE DOS COLUMNAS (flexbox básico)
+           ============================================ */
+        .cv-container {
+            max-width: 1000px;
+            margin: 10px auto;
+            background: white;
+            display: flex;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        /* Columna izquierda: sidebar */
+        aside {
+            width: 35%;
+            background: #2c3e50;
+            color: white;
+            padding: 30px 20px;
+        }
+        
+        /* Columna derecha: contenido principal */
+        main {
+            width: 65%;
+            padding: 40px;
+        }
+        
+        /* ============================================
+           ESTILOS BÁSICOS DE TEXTO
+           ============================================ */
+        h1 { font-size: 2em; margin-bottom: 5px; color: #2c3e50; }
+        h2 { font-size: 1.1em; text-transform: uppercase; letter-spacing: 2px; margin: 25px 0 15px; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; }
+        aside h2 { color: white; border-bottom-color: #3498db; }
+        
+        h3 { font-size: 1em; margin: 15px 0 5px; color: #34495e; }
+        aside h3 { color: #ecf0f1; }
+        
+        p { margin-bottom: 10px; font-size: 0.95em; }
+        
+        /* Listas sin viñetas personalizadas */
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 8px; font-size: 0.9em; }
+        
+        /* Enlaces */
+        a { color: #3498db; text-decoration: none; }
+        aside a { color: #ecf0f1; }
+        
+        /* Separador visual básico */
+        hr { border: none; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0; }
+        
+        /* Imagen circular básica */
+        img { border-radius: 50%; width: 120px; height: 120px; object-fit: cover; display: block; margin: 0 auto 20px; border: 3px solid #3498db; }
+        
+        /* Badges de habilidades */
+        mark { background: #3498db; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8em; display: inline-block; margin: 2px; }
+        
+        /* Barra de progreso básica con <meter> */
+        meter { width: 100%; height: 8px; }
+        
+        /* Responsive básico */
+        @media (max-width: 768px) {
+            .cv-container { flex-direction: column; }
+            aside, main { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================
+     CONTENEDOR PRINCIPAL DEL CV
+     ============================================ -->
+<div class="cv-container">
+
+    <!-- ============================================
+         ASIDE: BARRA LATERAL (contenido complementario)
+         Contacto, habilidades, educación, idiomas
+         ============================================ -->
+    <aside>
+        
+        <!-- FIGURE: Foto de perfil con leyenda -->
+        <figure>
+            <img src="img/foto.png" 
+                 alt="Foto profesional de Dayler Giraldo Urrea">
+            <figcaption style="text-align:center; font-size:0.8em; opacity:0.8;">Foto profesional</figcaption>
+        </figure>
+
+        <!-- HEADER del sidebar: Nombre y título -->
+        <header>
+            <h1 style="color:white; font-size:1.5em; text-align:center;">Dayler Giraldo Urrea</h1>
+            <p style="text-align:center; color:#3498db; font-weight:bold;">Desarrolladora Web Front-End</p>
+        </header>
+
+        <hr>
+
+        <!-- ADDRESS: Información de contacto -->
+        <section>
+            <h2>Contacto</h2>
+            <address style="font-style:normal;">
+                <ul>
+                    <li>📱 <a href="tel:+34600123456">+57 3007069328</a></li>
+                    <li>✉️ <a href="mailto:ana.garcia@email.com">giraldodayler7@gmail.com</a></li>
+                    <li>🌐 <a href="https://www.tiktok.com/@golden_wolf27?is_from_webapp=1&sender_device=pc">tik tiktok</a></li>
+                    <li>📍 Colombia, Medellin</li>
+                </ul>
+            </address>
+        </section>
+
+        <hr>
+
+        <!-- SECTION: Habilidades técnicas -->
+        <section>
+            <h2>Habilidades Técnicas</h2>
+            
+            <!-- DETAILS/SUMMARY: Habilidades desplegables -->
+            <details>
+                <summary><strong>Lenguajes</strong></summary>
+                <ul>
+                    <li><mark>HTML5</mark> <mark>CSS</mark></li>
+                    <li><mark>JavaScript</mark> </li>
+                    <li><mark>Python</mark> <mark>django</mark></li>
+                </ul>
+            </details>
+            
+            <details>
+                <summary><strong>Frameworks</strong></summary>
+                <ul>
+                    <li><mark>Bootstrap</mark>
+                </ul>
+            </details>
+
+            <!-- METER: Nivel de habilidades (semántico) -->
+            <p style="margin-top:15px; font-size:0.85em;">Nivel de HTML5:</p>
+            <meter value="40" min="0" max="100" low="50" high="80" optimum="90">95%</meter>
+            
+            <p style="font-size:0.85em; margin-top:10px;">Nivel de CSS3:</p>
+            <meter value="30" min="0" max="100" low="50" high="80" optimum="90">90%</meter>
+            
+            <p style="font-size:0.85em; margin-top:10px;">Nivel de JavaScript:</p>
+            <meter value="85" min="0" max="100" low="50" high="80" optimum="90">85%</meter>
+        </section>
+
+        <hr>
+
+        <!-- SECTION: Idiomas -->
+        <section>
+            <h2>Idiomas</h2>
+            <dl>
+                <dt><strong>Español</strong></dt>
+                <dd>Nativo</dd>
+                
+                <dt><strong>Inglés</strong></dt>
+                <dd>basico (A1) <progress value="30" max="100">85%</progress></dd>
+            </dl>
+        </section>
+
+        <hr>
+
+        <!-- SECTION: Educación (sidebar) -->
+        <section>
+            <h2>Educación</h2>
+            
+            <!-- ARTICLE: Cada título académico es independiente -->
+            <article>
+                <h3>Bachiller</h3>
+                <p><time datetime="2022-09">2017</time>
+                <p>Colegio la SalLe</p>
+            </article>
+            
+            <article>
+                <h3>Desarrollo de Software</h3>
+                <p><time datetime="2018-09">2025</time> - <time datetime="2022-06">2026</time></p>
+                <p>Sena - Centro de Tegnologico de Mobilario </p>
+            </article>
+        </section>
+
+        <hr>
+
+
+    </aside>
+
+    <!-- ============================================
+         MAIN: CONTENIDO PRINCIPAL DEL CV
+         Perfil, experiencia, proyectos
+         Solo debe existir UN <main> por página
+         ============================================ -->
+    <main>
+
+        <!-- ARTICLE: Sobre mí (contenido autocontenido) -->
+        <article>
+            <header>
+                <h2>Perfil Profesional</h2>
+            </header>
+            <p>
+               Persona analítica, reservada y con una alta capacidad de concentración,
+               cualidades fortalecidas por mi gusto hacia la lectura y los videojuegos.
+               Actualmente combino mis estudios en programación con el desarrollo de mi propio emprendimiento,
+               <strong>Golden Wolf</strong>, enfocado en el diseño y creación de manillas artesanales.
+               Busco aplicar mis conocimientos en desarrollo técnico para automatizar procesos,
+               crear plataformas web y aportar una mentalidad enfocada en la resolución de problemas y el aprendizaje continuo.
+            </p>
+        </article>
+
+        <!-- SECTION: Experiencia Laboral -->
+        <section>
+            <h2>Experiencia Laboral</h2>
+
+            <!-- ARTICLE: Cada trabajo es independiente -->
+            <article>
+                <header>
+                    <h3>Golden Wolf - Emprendimiento familiar</h3>
+                    <p>
+                        <strong>Cargo:</strong> Emprendedor / Apoyo en ventas y comercialización</li>
+                        <time datetime="2018-01">Enero 2018</time> - <time datetime="2026-06">Presente</time>
+                    </p>
+                </header>
+                
+                <!-- Lista de responsabilidades -->
+                <ul>
+                    <li>Atención y asesoría a clientes de manera presencial y por medios digitales.</li>
+                    <li>Venta y comercialización de manillas y accesorios personalizados.
+                    <li>Apoyo en la creación de diseños y personalización de productos según los gustos de cada cliente.</li>
+                    <li>Promoción de los productos mediante redes sociales, especialmente TikTok y WhatsApp.</li>
+                    <li>Creación de contenido y publicaciones para dar a conocer los productos.</li>
+                    <li>Apoyo en la renovación y modificación de manillas según las preferencias de los clientes.</li>
+                    <li>Participación en el crecimiento y organización del emprendimiento familiar.</li>
+                    <li>Desarrollo de habilidades en ventas, comunicación, servicio al cliente y emprendimiento.</li>
+        <!-- SECTION: Proyectos Destacados -->
+        <section>
+            <h2>Proyectos Destacados</h2>
+
+            <article>
+                <header>
+                    <h3>E-commerce-GoldenWolf</h3>
+                </header>
+                <p>
+                    Nuestro emprendimiento se llama Golden Wolf y es un negocio familiar dedicado a la elaboración y personalización de manillas y accesorios. Nuestro objetivo no es solamente vender un producto, sino ofrecer a cada persona algo que represente su personalidad, sus gustos, su estilo y aquello que considera importante.
+                    Realizamos manillas personalizadas con diferentes diseños, materiales y detalles, incluyendo piezas con acabados en oro laminado de 18K, símbolos religiosos como la Virgen de Guadalupe, San Benito y cruces, además de diferentes estilos y colores. También ofrecemos la renovación de manillas, permitiendo que nuestros clientes puedan cambiar el hilo o modificar su manilla para darle un nuevo estilo.
+                    Como emprendimiento familiar, queremos seguir creciendo poco a poco, manteniendo siempre la calidad y la atención cercana a nuestros clientes. Queremos que las personas que compren en Golden Wolf se sientan identificadas con lo que llevan puesto, y que cada manilla tenga un significado especial para ellas.
+                    A futuro queremos hacer crecer nuestra marca, llegar a más personas y ofrecer diseños cada vez más personalizados. También queremos demostrar que un emprendimiento familiar puede salir adelante con esfuerzo, unión, dedicación y fe, creando productos que no solo sean accesorios, sino una forma de expresar quiénes somos.
+                    <br>
+                    <strong>Golden Wolf:</strong> más que bisutería, es actitud.
+                </p>
+            </article>
+
+        <!-- SECTION: Intereses -->
+        <section>
+            <h2>Intereses</h2>
+            <ul>
+                <li><strong>💻 Tecnología y programación:</strong> interés por aprender desarrollo web, Python, Django y bases de datos como MongoDB.</li>
+                <li><strong>🎮 Videojuegos:</strong> disfruto jugar videojuegos y conocer nuevas tecnologías relacionadas con este mundo.</li>
+                <li><strong>🏀 Deporte:</strong> me gusta practicar y jugar baloncesto.</li>
+                <li><strong>🧳 Viajar:</strong> disfruto conocer nuevos lugares, especialmente pueblos y diferentes culturas.</li>
+                <li><strong>💼 Emprendimiento:</strong> tengo interés en crear, desarrollar y hacer crecer proyectos propios y negocios familiares.</li>
+                <li><strong>📚 Aprendizaje:</strong> me interesa adquirir nuevos conocimientos y desarrollar habilidades que me ayuden tanto personal como profesionalmente.</li>
+                
+            </ul>
+        </section>
+
+        <!-- FOOTER del main: Disponibilidad -->
+        <footer style="margin-top:30px; padding-top:20px; border-top:2px solid #eee;">
+            <p>
+                <strong>Disponibilidad:</strong> Inmediata | 
+                <strong>Modalidad:</strong> Remota | 
+                <strong>Ubicación preferida:</strong> Colombia - Medellin
+            </p>
+            <p style="font-size:0.85em; color:#666; margin-top:10px;">
+                <small>Última actualización: <time datetime="2026-06-08">8 de junio de 2026</time></small>
+            </p>
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- ============================================
+     FOOTER GLOBAL: Información legal
+     ============================================ -->
+<<footer style="text-align:center; padding:20px; color:#666; font-size:0.85em;">
+    <p>CV generado con HTML5 semántico
+    <p><small>© 2026 Dayler Giraldo Urrea. Este CV está optimizado para lectores de pantalla.</small></p>
+</footer>
+
+</body>
+</html>
