@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NextCodeBarber - Estilo & Precisión</title>
+    <link rel="stylesheet" href="estilos.css">
    
 </head>
 <body>
 
     
-    <header class="navbar">
+    <header class="barra">
         <div class="logo">NextCodeBarber</div>
         <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#contacto">Contacto</a>
+            <a href="inicio">Inicio</a>
+            <a href="servicios">Servicios</a>
+            <a href="contacto">Contacto</a>
         </nav>
     </header>
 
@@ -23,7 +24,7 @@
         <div class="hero-overlay">
             <h1>El Estilo del Futuro en Cada Corte</h1>
             <p>Fusionamos tecnología, precisión y elegancia para ofrecerte una experiencia de barbería premium única.</p>
-            <a href="#servicios" class="btn-primary">Reservar Cita</a>
+            <a href="servicios" class="btn-primary">Reserva tu cita</a>
         </div>
     </section>
 
@@ -32,37 +33,38 @@
         <h2>Nuestros Servicios</h2>
         
         <div class="cards-container">
-            <!-- Servicio 1 -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" alt="Corte de Cabello Premium">
+                <img src="corte.avif" alt="Corte de Cabello Premium">
                 <div class="card-content">
-                    <h3>Corte & Style Premium</h3>
+                    <h3>Corte y estilo Premium</h3>
                     <p>Corte personalizado adaptado a tu estilo con asesoría de imagen y acabado profesional.</p>
-                    <a href="#" class="btn-card">Ver detalles &rarr;</a>
+                    <a href="#" class="btn-card">Ver detalles</a>
                 </div>
             </div>
 
            
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&q=80" alt="Barba y Ritual de Toalla Caliente">
+                <img src="maquina.avif" alt="Barba y Ritual de Toalla Caliente">
                 <div class="card-content">
                     <h3>Perfilado de Barba</h3>
                     <p>Diseño de barba con navaja tradicional, perfilado exacto y tratamiento con toalla caliente.</p>
-                    <a href="#" class="btn-card">Ver detalles &rarr;</a>
+                    <a href="#" class="btn-card">Ver detalles</a>
                 </div>
             </div>
 
           
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&q=80" alt="Servicio a Domicilio VIP">
+                <img src="servicio.avif" alt="Servicio a Domicilio VIP">
                 <div class="card-content">
                     <h3>Atención a Domicilio</h3>
-                    <p>Llevamos la experiencia NextCodeBarber directamente a la comodidad de tu hogar u oficina.</p>
-                    <a href="#" class="btn-card">Ver detalles &rarr;</a>
+                    <p>Llevamos la experiencia NextCodeBarber directamente a la comodidad de tu hogar y oficina.</p>
+                    <a href="#" class="btn-card">Ver detalles</a>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer>  2026 - NextCodeBarber</footer>
 
 </body>
 </html>
